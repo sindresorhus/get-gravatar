@@ -38,7 +38,7 @@
     "buffer"
   ],
   "dependencies": {
-    "got": "^3.2.0",
+    "got": "^5.0.0",
     "gravatar-url": "^1.0.0"
   },
   "devDependencies": {
