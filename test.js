@@ -1,13 +1,9 @@
-'use strict';
-var test = require('ava');
-var fileType = require('file-type');
-var getGravatar = require('./');
+import test from 'ava';
+import fileType from 'file-type';
+import fn from './';
 
-test(function (t) {
-	t.plan(2);
-
-	getGravatar('sindresorhus@gmail.com', {size: 200}, function (err, img) {
-		t.assert(!err, err);
-		t.assert(fileType(img).ext === 'png');
-	});
+test(async t => {
+	const img = await fn('sindresorhus@gmail.com', {size: 200});
+	
+	t.is(fileType(img).ext, 'png');
 });
