@@ -13,24 +13,25 @@ $ npm install --save get-gravatar
 ## Usage
 
 ```js
-var fs = require('fs');
-var getGravatar = require('get-gravatar');
+const fs = require('fs');
+const getGravatar = require('get-gravatar');
 
-getGravatar('sindresorhus@gmail.com', {size: 200}, function (err, image) {
-	fs.writeFile('sindre.png', image, function (err) {
-		console.log('Successfully downloaded the Gravarar image');
-	});
+getGravatar('sindresorhus@gmail.com', {size: 200}).then(image => {
+	fs.writeFileSync('sindre.png', image);
+
+	console.log('Successfully downloaded the Gravatar image');
 });
 ```
 
 
 ## API
 
-### getGravatar(email, [options], callback)
+### getGravatar(email, [options])
+
+Returns a promise for the image as a buffer.
 
 #### email
 
-*Required*  
 Type: `string`
 
 Email matching a Gravatar profile.
@@ -60,12 +61,6 @@ Default: `g`
 Values: `g`, `pg`, `r`, `x`
 
 Allowed [rating](https://en.gravatar.com/site/implement/images/#rating) of the image.
-
-#### callback(error, image)
-
-##### image
-
-Type: `buffer`
 
 
 ## Related
