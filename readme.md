@@ -65,6 +65,7 @@ Allowed [rating](https://en.gravatar.com/site/implement/images/#rating) of the i
 
 ## Related
 
+- [get-gravatar-cli](https://github.com/SamVerschueren/get-gravatar-cli) - CLI for this module
 - [gravatar-url](https://github.com/sindresorhus/gravatar-url) - Get the URL to a Gravatar image from an email
 
 
