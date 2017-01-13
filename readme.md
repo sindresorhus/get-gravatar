@@ -40,24 +40,24 @@ Email matching a Gravatar profile.
 
 ##### size
 
-Type: `number`  
-Default: `80`  
+Type: `number`<br>
+Default: `80`<br>
 Values: `1..2048`
 
 [Size](https://en.gravatar.com/site/implement/images/#size) of the image.
 
 ##### default
 
-Type: `string`  
-Default: [This image](http://www.gravatar.com/avatar/00000000000000000000000000000000)  
+Type: `string`<br>
+Default: [This image](http://www.gravatar.com/avatar/00000000000000000000000000000000)<br>
 Values: Custom URL or `404`, `mm`, `identicon`, `monsterid`, `wavatar`, `retro`, `blank`
 
 [Image](https://en.gravatar.com/site/implement/images/#default-image) to return if the email didn't match any Gravatar profile.
 
 ##### rating
 
-Type: `string`  
-Default: `g`  
+Type: `string`<br>
+Default: `g`<br>
 Values: `g`, `pg`, `r`, `x`
 
 Allowed [rating](https://en.gravatar.com/site/implement/images/#rating) of the image.
@@ -71,4 +71,4 @@ Allowed [rating](https://en.gravatar.com/site/implement/images/#rating) of the i
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

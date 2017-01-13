@@ -1,8 +1,8 @@
 import test from 'ava';
 import fileType from 'file-type';
-import fn from './';
+import m from './';
 
 test(async t => {
-	const img = await fn('sindresorhus@gmail.com', {size: 200});
+	const img = await m('sindresorhus@gmail.com', {size: 200});
 	t.is(fileType(img).ext, 'png');
 });

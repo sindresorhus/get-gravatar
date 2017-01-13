@@ -1,9 +1,5 @@
 'use strict';
-var gravatarUrl = require('gravatar-url');
-var got = require('got');
+const gravatarUrl = require('gravatar-url');
+const got = require('got');
 
-module.exports = function (email, opts) {
-	return got(gravatarUrl(email, opts), {encoding: null}).then(function (data) {
-		return data.body;
-	});
-};
+module.exports = (email, opts) => got(gravatarUrl(email, opts), {encoding: 'buffer'}).then(data => data.body);
