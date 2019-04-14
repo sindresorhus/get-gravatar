@@ -1,8 +1,8 @@
 import test from 'ava';
 import fileType from 'file-type';
-import m from './';
+import getGravatar from '.';
 
-test(async t => {
-	const img = await m('sindresorhus@gmail.com', {size: 200});
+test('main', async t => {
+	const img = await getGravatar('sindresorhus@gmail.com', {size: 200});
 	t.is(fileType(img).ext, 'png');
 });

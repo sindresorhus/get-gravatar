@@ -6,21 +6,25 @@
 ## Install
 
 ```
-$ npm install --save get-gravatar
+$ npm install get-gravatar
 ```
 
 
 ## Usage
 
 ```js
+const {promisify} = require('util');
 const fs = require('fs');
 const getGravatar = require('get-gravatar');
 
-getGravatar('sindresorhus@gmail.com', {size: 200}).then(image => {
-	fs.writeFileSync('sindre.png', image);
+const writeFileP = promisify(fs.writeFile);
+
+(async () => {
+	const image = await getGravatar('sindresorhus@gmail.com', {size: 200});
+	await writeFileP('sindre.png', image);
 
 	console.log('Successfully downloaded the Gravatar image');
-});
+})();
 ```
 
 
@@ -28,7 +32,7 @@ getGravatar('sindresorhus@gmail.com', {size: 200}).then(image => {
 
 ### getGravatar(email, [options])
 
-Returns a promise for the image as a buffer.
+Returns a promise for the image as a `Buffer`.
 
 #### email
 
