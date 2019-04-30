@@ -12,15 +12,12 @@ Get a Gravatar image.
 
 @example
 ```
-import {promisify} from 'util';
-import * as fs from 'fs';
+import {promises as fs} from 'fs';
 import getGravatar = require('get-gravatar');
-
-const writeFileP = promisify(fs.writeFile);
 
 (async () => {
 	const image = await getGravatar('sindresorhus@gmail.com', {size: 200});
-	await writeFileP('sindre.png', image);
+	await fs.writeFile('sindre.png', image);
 
 	console.log('Successfully downloaded the Gravatar image');
 })();

@@ -1,5 +1,4 @@
 'use strict';
-
 const gravatarUrl = require('gravatar-url');
 const got = require('got');
 
