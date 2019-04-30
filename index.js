@@ -1,5 +1,9 @@
 'use strict';
+
 const gravatarUrl = require('gravatar-url');
 const got = require('got');
 
-module.exports = (email, opts) => got(gravatarUrl(email, opts), {encoding: 'buffer'}).then(data => data.body);
+module.exports = async (email, options) => {
+	const {body} = await got(gravatarUrl(email, options), {encoding: 'buffer'});
+	return body;
+};
