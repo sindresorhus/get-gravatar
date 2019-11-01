@@ -6,9 +6,11 @@ declare namespace getGravatar {
 }
 
 /**
-Get a Gravatar image.
+Get a Gravatar image from an identifier, such as an email.
 
-@param email - Email matching a Gravatar profile.
+@param identifier - Identifier for which to get a Gravatar image, such as an email matching a Gravatar profile.
+
+@param options - The options to use. 
 
 @example
 ```
