@@ -35,7 +35,7 @@ Returns a promise for the image as a `Buffer`.
 
 Type: `string`
 
-Identifier for which to get the Gravatar picture.
+Identifier for which to get the Gravatar image.
 
 This will typically be an email matching a Gravatar profile, but can technically be any string.
 
