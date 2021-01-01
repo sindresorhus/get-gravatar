@@ -1,4 +1,4 @@
-# get-gravatar [![Build Status](https://travis-ci.org/sindresorhus/get-gravatar.svg?branch=master)](https://travis-ci.org/sindresorhus/get-gravatar)
+# get-gravatar
 
 > Get a [Gravatar](https://en.gravatar.com) image from an identifier, such as an email
 
