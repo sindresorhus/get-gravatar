@@ -1,8 +1,9 @@
 import test from 'ava';
-import fileType from 'file-type';
-import getGravatar from '.';
+import FileType from 'file-type';
+import getGravatar from './index.js';
 
 test('main', async t => {
 	const image = await getGravatar('sindresorhus@gmail.com', {size: 200});
-	t.is(fileType(image).ext, 'png');
+	const fileType = await FileType.fromBuffer(image);
+	t.is(fileType.ext, 'png');
 });

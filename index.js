@@ -1,8 +1,6 @@
-'use strict';
-const gravatarUrl = require('gravatar-url');
-const got = require('got');
+import gravatarUrl from 'gravatar-url';
+import got from 'got';
 
-module.exports = async (identifier, options) => {
-	const {body} = await got(gravatarUrl(identifier, options), {encoding: 'buffer'});
-	return body;
-};
+export default async function getGravatar(identifier, options) {
+	return got(gravatarUrl(identifier, options)).buffer();
+}
