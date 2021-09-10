@@ -1,6 +1,6 @@
 {
 	"name": "get-gravatar",
-	"version": "4.1.0",
+	"version": "5.0.0",
 	"description": "Get a Gravatar image from an identifier, such as an email",
 	"license": "MIT",
 	"repository": "sindresorhus/get-gravatar",
